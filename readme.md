@@ -1,6 +1,6 @@
 # 2024-03-14 노마드 코더 바닐라 JS Chrome 앱 만들기
 
-## 1 day - 24.03.14 
+## day 1 - 24.03.14 
 
 - HTML 태그인 `<Input>` 속성인 **required**를 다시 한번 깨달음  
 (사용자가 값을 넣지 않으면 제출 할 수 없음)
@@ -13,7 +13,7 @@
 
 - string끼리 합치는 방법 `console.log('hello ${username}')` 을 배움
 ___
-## 2 day - 24.03.15
+## day 2 - 24.03.15
 
 - 파일들을 세분화 해서 관리하기 위해 js 폴더와 css 폴더를 각각 만들었음  
  
@@ -57,7 +57,7 @@ localStorage.removeItem("key");
   ``` 
 
 ___
-## 3 day - 24.03.18
+## day 3 - 24.03.18
 
 - padStart(n,"x") 함수를 배움   
   => string이 가져야 할 길이가 n 인데 그렇지 않다면 앞쪽에 "x"를 n 길이가 되는 만큼 붙이는 함수 
@@ -95,3 +95,27 @@ bgImage.src = `img/~~~~~.jpg`;
 document.body.appendChild(bgImage);
 
 ```
+
+
+## day 4 - 24.03.19 _ To Do List 만들기
+
+_이전에 파일들을 다시 정리해서 깃허브에 업로드 함_   
+
+### **todo.js**   
+기능 : 사용자가 할 일을 입력하고 그 값을 보여주고 삭제하는 기능을 구현함   
+
+`handleToDoSubmit(event)`   
+>할 일을 사용자가 입력했을때 submit의 event를 중지하고 입력한 값을 저장하고   
+input창의 value를 지우고 saveTodos()와 panitToDo()를 호출함
+
+`paintToDo()`   
+>입력한 값을 가지고 js가 HTML에 li 태그와 span 태그, button 태그 로 조합이 된 태그를 만듦   
+버튼에 "click" 이벤트를 넣어서 클릭시에 deleteToDo()를 호출함
+
+`deleteToDo(event)`
+> 현재 있는 li를 삭제 하는 함수   
+event.target의 정보를 가지고 어떤 li(todo항목)을 삭제하는지 알 수 있다.
+
+ 
+`saveToDos`   
+> localStorage에 입력된 값(ToDo)를 array로 저장하게함.
