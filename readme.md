@@ -95,7 +95,7 @@ bgImage.src = `img/~~~~~.jpg`;
 document.body.appendChild(bgImage);
 
 ```
-
+___
 
 ## day 4 - 24.03.19 _ To Do List 만들기
 
@@ -119,3 +119,25 @@ event.target의 정보를 가지고 어떤 li(todo항목)을 삭제하는지 알
  
 `saveToDos`   
 > localStorage에 입력된 값(ToDo)를 array로 저장하게함.
+
+## day 5 - 24.03.20 _ To Do List 만들기 2   
+
+- `forEach()`를 배움.   
+ 각각의 item(array)을 가지고 요소마다 함수를 실행시킴
+
+- 애로우 함수를 배움.(간략하게 함수 선언)   
+```
+// ex)
+parsedTodos.array.forEach((item) => console.log("ㅎㅇㅎㅇ",item));
+```
+
+### todos.js - 기능 추가  
+
+기능 : 할 일을 완전히 (localStroge 까지) 삭제하는 기능을 구현함   
+
+- 브라우저가 toDos목록을 가져와 보여주기 위해 localstorage에 저장되어 있는 array를 (String으로 저장 되어 있음) JSON.parse()를 통해서 array로 바꾸어 줌.  
+- toDo를 추가할 때 덮어쓰기를 방지 하기 위해서 `const ToDos`를 `let ToDos`로 바꾸어 주고 todo를 생성할 때 array에 이어서 추가 되게 끔 `toDos = parsedTodos`를 추가함.   
+- todo를 삭제 하기 위해서 todo(text)만 저장하지 않고 id (랜덤한 수)와 함께 objec로 저장함. 이로 인해 js가 어떤 todo를 삭제하는지 id로 식별이 가능해짐.
+
+- `filter()` 함수를 배움   
+array의 요소를 가지고 그만큼 ()안에 함수를 실행하고 그때마다 return 값이 true인 요소들만 다시 array를 만들어주는 함수임.
