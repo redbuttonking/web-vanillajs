@@ -140,4 +140,25 @@ parsedTodos.array.forEach((item) => console.log("ㅎㅇㅎㅇ",item));
 - todo를 삭제 하기 위해서 todo(text)만 저장하지 않고 id (랜덤한 수)와 함께 objec로 저장함. 이로 인해 js가 어떤 todo를 삭제하는지 id로 식별이 가능해짐.
 
 - `filter()` 함수를 배움   
-array의 요소를 가지고 그만큼 ()안에 함수를 실행하고 그때마다 return 값이 true인 요소들만 다시 array를 만들어주는 함수임.
+array의 요소를 가지고 그만큼 ()안에 함수를 실행하고 그때마다 return 값이 true인 요소들만 다시 array를 만들어주는 함수임.   
+
+## day 6 - 24.03.21 _ To Do List 만들기 3   
+
+기능 : 유저의 위치 정보를 얻어서 날씨를 띄우는 기능을 구현함   
+
+- 날씨 데이터 (API)를 가지고 `filter()` 함수를 사용하여 내 위치의 날씨 데이터를 띄움
+
+`filter()`
+> promise함수 이기 때문에 당장 일어나지 않고 시간이 걸린뒤에 일어남   
+그래서 Then과 함께 사용함
+```
+fetch(url)  // 1. url를 요청하고
+  .then((response) => response.json())   // 2. response(응답)받고
+  .then((data) =>{   // 3. 데이터를 얻는다 (HTML에 넣는것 까지)
+    const weather = document.querySelector("#weather span:last-child");
+    const city = document.querySelector("#weather span:first-child");
+    weather.innerText = `${data.weather[0].main}/${data.main.temp}`;
+    city.innerText = data.name;
+  });
+```
+
