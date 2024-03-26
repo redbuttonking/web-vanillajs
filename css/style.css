@@ -1,7 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .hidden{
   display: none;
 }
 
-#bible span{
-  display: block;
+
+#login-form, #clock, #greeting,
+#todo-form, #todo-list, #bible,
+#weather {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);    /* 요소를 중앙 정렬 */
+  text-align: center;
+  color: aliceblue;
+  position: absolute;
 }
+
+#login-form {
+
+}
+
+#clock {
+
+}
+
+#greeting {
+  font-family: "Gamja Flower", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#todo-form {
+
+}
+
+#todo-form input{
+  width: 300px;
+
+}
+
+#todo-list {
+
+}
+
+#bible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  top: 80%;
+
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+  white-space:nowrap;
+
+}
+
+#weather {
+
+}
+
+#todo-form input{
+  width: 300px;
+
+}
+

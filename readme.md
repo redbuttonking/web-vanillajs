@@ -162,3 +162,12 @@ fetch(url)  // 1. url를 요청하고
   });
 ```
 
+## day 7 - 24.03.26 _ To Do List 디자인 하기 _ CSS   
+
+- 구글폰트를 사용해서 폰트를 바꿈   
+> greeting , bible   
+- 새로운 이미지 추가 및 배경이미지(img)의 테두리 여백을 없앰
+>  `imges = ["0.jpeg","1.jpeg","2.jpeg","3.jpeg","4.jpeg"]`   
+    부모인 **body**의 padding과 margin을 0으로줌 (자식에게도 영향이 감)
+
+- text(태그들)을  `position: absolute;`로 중앙 정렬 해놓음   

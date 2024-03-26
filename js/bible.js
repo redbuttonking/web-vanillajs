@@ -53,10 +53,9 @@ const bibleVerse = [
 ];
 
 
-
 const verses = document.querySelector("#bible span:first-child");
 const address = document.querySelector("#bible span:last-child");
 const toDayBible = bibleVerse[Math.floor(Math.random()*bibleVerse.length)];
 
-verses.innerText = toDayBible.verse;
+verses.innerText = `" ${toDayBible.verse} "`;
 address.innerText = toDayBible.address;
