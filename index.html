@@ -4,15 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css"/>
-  <title>App</title>
+  <title>To Do List</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Gothic:wght@700&family=Poppins:wght@500&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
 
 </head>
 <body>
   
-  <h2 id="clock">00:00:00</h2>
+  <div id="clock">
+    <span>
+      00:00
+    </span>
+    <span>
+      :00
+    </span> 
+  </div>
 
   <form class="hidden" id="login-form">
     <input 
@@ -27,11 +35,11 @@
   <h1 class="hidden" id="greeting"></h1>
 
   <form id="todo-form">
-    <input type="text" placeholder="Write a To Do and Press Enter"" required>
+    <input type="text" placeholder="오늘의 할 일을 입력해주세요" required>
   </form>
 
   <ul id="todo-list">
-    <li id="111">
+    <!-- <li id="111">
       <span>test1</span>
       <button>❌</button>
     </li>
@@ -39,7 +47,7 @@
     <li id="222">
       <span>test2</span>
       <button>❌</button>
-    </li>
+    </li> -->
 
 
   </ul>
@@ -50,8 +58,9 @@
   </div>
 
   <div id="weather">
-    <span></span>
-    <span></span>
+    <div>Today Weather</div>
+    <span id="city"></span>
+    <span id="weather-temp"></span>
   </div>
 
 

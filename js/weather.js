@@ -7,10 +7,10 @@ function onGeoOk(position){
   fetch(url)
   .then((response) => response.json())
   .then((data) =>{
-    const weather = document.querySelector("#weather span:last-child");
-    const city = document.querySelector("#weather span:first-child");
-    weather.innerText = `${data.weather[0].main}/${data.main.temp}`;
+    const weather = document.querySelector("#weather-temp");
+    const city = document.querySelector("#city");
     city.innerText = data.name;
+    weather.innerText = `${data.weather[0].main} / ${data.main.temp}°`;
   });
 
 }
@@ -21,5 +21,5 @@ function onGeoError(){
 
 
 
-
-navigator.geolocation.getCurrentPosition(onGeoOk,onGeoError)
+                                        // 참일때 , 거짓일때 조건에 맞게 실행
+navigator.geolocation.getCurrentPosition(onGeoOk,onGeoError);
