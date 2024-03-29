@@ -27,10 +27,9 @@ img {
   display: none;
 }
 
-
 #login-form, #clock, #greeting,
 #todo-form, #todo-list, #bible,
-#weather {
+#weather, #info {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);    /* 요소를 중앙 정렬 */
@@ -39,8 +38,50 @@ img {
   position: absolute;
 }
 
-#login-form {
+@keyframes bounce {
+  0%{transform: translateX(0);}
+  50%{transform: translateX(-10px);}
+  100%{transform: translateX(0);}
+}
 
+#login-form {
+  top: 5%;
+  left: 90%;
+}
+
+#login-form i{
+  /* margin-right: 15px; */
+  text-shadow:none;
+  animation: bounce 1.5s infinite;
+}
+
+
+#login-form input{
+  width: 200px;
+  height: 25px;
+  
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  
+  text-align: center;
+  font-weight: 800;
+  color: white;
+  font-size: 18px;
+
+  text-shadow:  -0.5px -0.5px 0 black,  
+  0.5px -0.5px 0 black,
+  -0.5px 0.5px 0 black,
+  0.5px  0.5px 0 black; 
+
+  outline: none;
+
+}
+
+
+#login-form ::placeholder{
+  color:rgb(255, 255, 255);
+  
 }
 
 #clock {
@@ -79,13 +120,17 @@ img {
 
 #todo-form input{
   width: 1000px;
+  height: 40px;
+
   text-align: center;
+  font-size: 30px;
   color: white;
 
   border: none;
   border-bottom: 2px solid white ;
   background-color: transparent;
-  
+
+  outline: none; 
 }
 
 #todo-form input::placeholder{
@@ -127,3 +172,25 @@ img {
   font-size: 25px;
 }
 
+@keyframes blink {
+
+  0%{
+    color: white;
+  }
+  50%{
+    color: rgb(179, 225, 243);    
+  }
+  100%{
+    color: white;
+  }
+}
+
+#info {
+  top: 78%;
+  animation: blink 2s infinite;
+
+  font-family: "Dongle", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+}

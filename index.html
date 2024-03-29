@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Gothic:wght@700&family=Poppins:wght@500&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -23,22 +24,31 @@
   </div>
 
   <form class="hidden" id="login-form">
+    <span>
+      <i class="fa-solid fa-arrow-right"></i>
+    </span>
     <input 
     required 
-    maxlength="15" 
-    type="text" placeholder="Wat is your name?"/>
-    
-    <input type="submit" value="Log in"/>
-    
+    maxlength="15"
+    type="text" 
+    placeholder="이름을 입력해 주세요."
+    onclick="this.placeholder = '';"
+    />
+     
   </form>
   
   <h1 class="hidden" id="greeting"></h1>
 
-  <form id="todo-form">
-    <input type="text" placeholder="오늘의 할 일을 입력해주세요" required>
+  <h1 id="info">이름을 입력하여 To Do List를 시작하세요!</h1>
+
+  <form class="hidden" id="todo-form">
+    <input type="text" placeholder="오늘의 할 일을 입력해주세요" 
+    required
+    onclick="this.placeholder = '';"
+    />
   </form>
 
-  <ul id="todo-list">
+  <ul class="hidden" id="todo-list">
     <!-- <li id="111">
       <span>test1</span>
       <button>❌</button>
@@ -71,6 +81,9 @@
   <script src="js/background.js"></script>
   <script src="js/todo.js"></script>
   <script src="js/weather.js"></script>
+
+  <script src="https://kit.fontawesome.com/275849ef8c.js" crossorigin="anonymous"></script>
+
   
 
 </body>
