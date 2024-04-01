@@ -1,6 +1,7 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
+const plzAddTodo = document.getElementById("plz-addTodo");
 
 const TODOS_KEY = "todos"
 
@@ -18,13 +19,20 @@ function deleteToDo(event){
 }
 
 function paintToDo(newTodo){
+
+  checkTodo();
+  const checkbox = document.createElement("input");
   const li = document.createElement("li");
   const span = document.createElement("span");
+  checkbox.type="checkbox";
   li.id=newTodo.id;
   span.innerText = newTodo.text;
-  const button = document.createElement("button");
-  button.innerText = "❌";
+  const button = document.createElement("i");
+  button.classList.add("fa-solid","fa-trash-can");
   button.addEventListener("click",deleteToDo);
+  button.addEventListener("click",checkTodo)
+
+  li.appendChild(checkbox);
   li.appendChild(span);
   li.appendChild(button);
 
@@ -47,15 +55,38 @@ function handleToDoSubmit(event){
   
 }
 
+function showPlzAddTodo (){
+  plzAddTodo.classList.remove("hidden");
+}
+
+function removePlzAddTodo(){
+  plzAddTodo.classList.add("hidden");
+}
+
+function checkTodo(){
+  if(toDos.length===0){
+    if(localStorage.getItem("username")===null){
+      removePlzAddTodo();
+    }else{
+      showPlzAddTodo();
+    }
+  }else{
+    removePlzAddTodo();
+  }
+}
+
+
 toDoForm.addEventListener("submit" , handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if(savedToDos){
+
+  
   const parsedTodos = JSON.parse(savedToDos);
   toDos = parsedTodos;
   parsedTodos.forEach(paintToDo);
-  // todo리스트가 없을때 안내 문구를 만들어보자
-  // console.log(toDos);?-
+  checkTodo();
   
+  console.log(toDos);
 }

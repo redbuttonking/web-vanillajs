@@ -5,6 +5,7 @@ const greeting = document.querySelector("#greeting");
 const info = document.querySelector("#info");
 const todoForm = document.querySelector("#todo-form");
 const todoList = document.querySelector("#todo-list");
+const plzAddTodo2 = document.getElementById("plz-addTodo");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -18,8 +19,9 @@ function onLoginSubmit(event){
 }
 
 function paintGreetings(username){
-    greeting.innerText = `환영합니다 ${username}님! `;
+    greeting.innerText = `Welcome! ${username}!`;
     info.classList.add(HIDDEN_CLASSNAME);
+    plzAddTodo2.classList.remove(HIDDEN_CLASSNAME);
     greeting.classList.remove(HIDDEN_CLASSNAME);
     todoForm.classList.remove(HIDDEN_CLASSNAME);
     todoList.classList.remove(HIDDEN_CLASSNAME);

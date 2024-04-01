@@ -1,3 +1,6 @@
+@import "variables.css";
+
+
 body {
   margin: 0;
   padding: 0;
@@ -11,10 +14,7 @@ body {
 
   white-space:nowrap;
 
-  text-shadow:  -1px -1px 0 black,  
-  1px -1px 0 black,
-  -1px 1px 0 black,
-  1px  1px 0 black; 
+  text-shadow: var(--text-edge);
 }
 
 img {
@@ -29,7 +29,7 @@ img {
 
 #login-form, #clock, #greeting,
 #todo-form, #todo-list, #bible,
-#weather, #info {
+#weather, #info, #plz-addTodo {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);    /* 요소를 중앙 정렬 */
@@ -69,10 +69,7 @@ img {
   color: white;
   font-size: 18px;
 
-  text-shadow:  -0.5px -0.5px 0 black,  
-  0.5px -0.5px 0 black,
-  -0.5px 0.5px 0 black,
-  0.5px  0.5px 0 black; 
+  text-shadow:  var(--text-edge);
 
   outline: none;
 
@@ -104,12 +101,13 @@ img {
 }
 
 #greeting{
-  font-family: "Gamja Flower", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-
   top: 2.5%;
-  left: 89%;
+  left: 91%;
+
+  font-family: "Dongle", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
 }
 
 
@@ -122,9 +120,14 @@ img {
   width: 1000px;
   height: 40px;
 
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
   text-align: center;
   font-size: 30px;
   color: white;
+  text-shadow: var(--text-edge);
 
   border: none;
   border-bottom: 2px solid white ;
@@ -139,11 +142,33 @@ img {
 
 #todo-list {
   /* display: none; */
-  /* display: flex; */
+  list-style: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  top: 57%;
+
+  text-align: start;
+  top: 60%;
+  height: 100px;
+  width: 100px;
+
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+}
+
+#todo-list li input[type="checkbox"]:checked + span{
+  text-decoration: line-through; 
+  color: rgba(255, 255, 255,0.9);
+}
+
+#todo-list li span{
+  padding-right: 10px;
+
+}
+#todo-list li i:hover{
+  cursor: pointer;
 }
 
 #bible {
@@ -164,12 +189,12 @@ img {
   flex-direction: column;
   align-items: first baseline;
   top: 8%;
-  left: 7%;
+  left: 6%;
 
-  font-family: "Gamja Flower", sans-serif;
-  font-weight: 400;
+  font-family: "Dongle", sans-serif;
+  font-weight: 700;
   font-style: normal;
-  font-size: 25px;
+  font-size: 28px;
 }
 
 @keyframes blink {
@@ -193,4 +218,14 @@ img {
   font-weight: 700;
   font-style: normal;
   font-size: 60px;
+}
+
+#plz-addTodo {
+  top: 70%;
+
+  font-family: "Dongle", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 45px;
+  
 }

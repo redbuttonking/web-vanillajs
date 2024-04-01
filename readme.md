@@ -203,4 +203,20 @@ fetch(url)  // 1. url를 요청하고
 > `@keyframes bounce` (화살표가 좌우로 움직임)   
 
 <입력창(todo,login) 디자인 함>
-> 일자 bar 형태 
+> 일자 bar 형태   
+
+## day 10 - 24.04.01 _ To Do List 디자인 하기 _ CSS   
+
+<구글 폰트를 사용해서 폰트를 바꿈>
+> weather, greeting, todo   
+
+<삭제 아이콘 및 삭제선 기능 _ input>   
+> type = "checkbox" 사용, 체크박스에 체크가 되어있을 때 텍스트에 삭제선(text-decoration) 적용
+
+<유저에게 안내하는 텍스트를 넣음>
+> todolist가 없거나 첫 이름 입력하기 전에 "Please add something to do today" 라는 문구를 띄움   
+반대로 todolist가 있으면 안내문구는 사라지게 함   
+
+
+<해야할 일>   
+1. 체크박스 체크한정보를 저장해서 다음에들어올때 적용 되는걸 해야함
