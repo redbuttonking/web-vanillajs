@@ -24,20 +24,26 @@ function paintToDo(newTodo){
   const checkbox = document.createElement("input");
   const li = document.createElement("li");
   const span = document.createElement("span");
+  const button = document.createElement("i");
+  
   checkbox.type="checkbox";
+  checkbox.checked = newTodo.isChecked;
+
   li.id=newTodo.id;
   span.innerText = newTodo.text;
-  const button = document.createElement("i");
+  
   button.classList.add("fa-solid","fa-trash-can");
+
   button.addEventListener("click",deleteToDo);
-  button.addEventListener("click",checkTodo)
+  button.addEventListener("click",checkTodo);
+  checkbox.addEventListener("change",updateTodoState);
 
   li.appendChild(checkbox);
   li.appendChild(span);
   li.appendChild(button);
 
-
   toDoList.appendChild(li);
+
   
 }
 
@@ -48,6 +54,7 @@ function handleToDoSubmit(event){
   const newTodoObj = {
     text:newTodo,
     id: Date.now(),
+    ischecked : false,
   }
   toDos.push(newTodoObj);
   paintToDo(newTodoObj);
@@ -74,6 +81,30 @@ function checkTodo(){
     removePlzAddTodo();
   }
 }
+
+function updateTodoState(event){
+  var checkbox = event.target;
+  var todoText = checkbox.nextSibling;
+  
+  if (checkbox.checked) {
+    todoText.style.textDecoration = "line-through";
+    todoText.style.color = "rgba(255, 255, 255,0.7)"
+    todoText.style.textShadow = "none";
+    // localStorage.setItem("isChecked",true);
+    
+  } else {
+    todoText.style.textDecoration = "none";
+    todoText.style.color = "aliceblue";
+    todoText.style.textShadow = "var(--text-edge)";
+    // localStorage.setItem("isChecked",false);
+    
+  }
+
+  console.log(toDos);
+  console.log(checkbox);
+
+}
+
 
 
 toDoForm.addEventListener("submit" , handleToDoSubmit);

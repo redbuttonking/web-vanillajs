@@ -2,7 +2,7 @@
 
 ## day 1 - 24.03.14 
 
-- HTML 태그인 `<Input>` 속성인 **required**를 다시 한번 깨달음  
+- HTML 태그인 `<Input>` 속성인 **required**를 다시 한번 알게됨  
 (사용자가 값을 넣지 않으면 제출 할 수 없음)
 
 - 웹의 event를 발생시켰을떄 자동으로 새로고침이 되는 것을 막는것을 배움  
@@ -56,7 +56,6 @@ localStorage.removeItem("key");
   등등~~
   ``` 
 
-___
 ## day 3 - 24.03.18
 
 - padStart(n,"x") 함수를 배움   
@@ -95,7 +94,6 @@ bgImage.src = `img/~~~~~.jpg`;
 document.body.appendChild(bgImage);
 
 ```
-___
 
 ## day 4 - 24.03.19 _ To Do List 만들기
 
@@ -162,7 +160,7 @@ fetch(url)  // 1. url를 요청하고
   });
 ```
 
-## day 7 - 24.03.26 _ To Do List 디자인 하기 _ CSS   
+## day 7 - 24.03.26 _ To Do List 디자인 하기 _ CSS 1   
 
 <구글폰트를 사용해서 폰트를 바꿈>   
 > greeting , bible   
@@ -174,7 +172,7 @@ fetch(url)  // 1. url를 요청하고
 <텍스트를 중앙 정렬 해놓음>
 >`position: absolute` , `transform: translate(-50%,-50%)`
 
-## day 8 - 24.03.27 _ To Do List 디자인 하기 _ CSS   
+## day 8 - 24.03.27 _ To Do List 디자인 하기 _ CSS 2   
 
 
 <전체적인 위치 조정>
@@ -191,7 +189,7 @@ fetch(url)  // 1. url를 요청하고
 
 <시간 표시 수정>
 > 초 부분을 시간/분 보다 작게 만들고 따로 나눠 바뀔 때 마다 흔들리는 현상을 방지시킴 (possition:absolute)   
-## day 9 - 24.03.29 _ To Do List 디자인 하기 _ CSS   
+## day 9 - 24.03.29 _ To Do List 디자인 하기 _ CSS 3   
 
 <초기화면(이름 입력 안했을 때) info를 만듦>   
 > 기능 : blink , 이름 입력시에 사라짐
@@ -205,7 +203,7 @@ fetch(url)  // 1. url를 요청하고
 <입력창(todo,login) 디자인 함>
 > 일자 bar 형태   
 
-## day 10 - 24.04.01 _ To Do List 디자인 하기 _ CSS   
+## day 10 - 24.04.01 _ To Do List 디자인 하기 _ CSS 4   
 
 <구글 폰트를 사용해서 폰트를 바꿈>
 > weather, greeting, todo   
@@ -218,5 +216,32 @@ fetch(url)  // 1. url를 요청하고
 반대로 todolist가 있으면 안내문구는 사라지게 함   
 
 
-<해야할 일>   
-1. 체크박스 체크한정보를 저장해서 다음에들어올때 적용 되는걸 해야함
+<다음에 해야할 일>   
+1. 체크박스 체크한정보를 저장해서 다음에 들어올때(새로고침) 적용 되는걸 해야함   
+
+## day 11 - 24.04.02 _ To Do List 디자인 하기 _ CSS 5 / 기능 구현(checkbox)
+
+<todolist 취소선 변경>
+> css로 취소선을 적용 시켰는데 js에서 eventlistener로 적용하게끔 바꿈
+
+```
+// todolist의 현재 상태(체크박스)에 따라 css를 변경함
+updateTodoState(event);
+
+// css 삭제(취소선 부분)
+#todo-list li input[type="checkbox"]:checked + span{
+  text-decoration: line-through; 
+  color: rgba(255, 255, 255,0.7);
+  text-shadow: none;
+}
+
+```
+<네이버 , 유튜브 , 구글 링크 생성>   
+> a태그로 생성해 놓음
+
+~~<체크박스 상태 유지 (로컬스토리지에 저장)>~~ _ 구현중
+> 도대체.... 왜... 안되는것이야... 내가 모르는 것이 있나 왜 상태 업데이트가 안되고 저장도 안되고 불러오는것도 안되냐 이말이야!!!!!!
+
+<다음에 해야할 일>   
+1. 체크박스 기능 구현
+2. 웹페이지 링크 디자인 구현

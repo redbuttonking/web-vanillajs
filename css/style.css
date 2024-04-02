@@ -29,7 +29,7 @@ img {
 
 #login-form, #clock, #greeting,
 #todo-form, #todo-list, #bible,
-#weather, #info, #plz-addTodo {
+#weather, #info, #plz-addTodo, #webPage {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);    /* 요소를 중앙 정렬 */
@@ -158,16 +158,25 @@ img {
   font-size: 25px;
 }
 
-#todo-list li input[type="checkbox"]:checked + span{
-  text-decoration: line-through; 
-  color: rgba(255, 255, 255,0.9);
+#todo-list li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+#todo-list li input{
+  width: 25px;
+  height: 25px;
+
 }
 
 #todo-list li span{
+  margin-top: 5px;
   padding-right: 10px;
 
 }
-#todo-list li i:hover{
+#todo-list li i:hover, #todo-list li input:hover{
   cursor: pointer;
 }
 
