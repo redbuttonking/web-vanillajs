@@ -103,7 +103,7 @@ function updateTodoState(event){
 
   // console.log(event);
   // console.log(todoText);
-  // console.log(checkbox);
+  console.log(checkbox);
 
 }
 
