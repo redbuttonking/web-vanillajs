@@ -91,21 +91,21 @@ function updateTodoState(event){
     todoText.style.color = "rgba(255, 255, 255,0.7)"
     todoText.style.textShadow = "none";
     // localStorage.setItem("isChecked",true);
+
     
   } else {
     todoText.style.textDecoration = "none";
     todoText.style.color = "aliceblue";
     todoText.style.textShadow = "var(--text-edge)";
     // localStorage.setItem("isChecked",false);
-    
+
   }
 
-  console.log(toDos);
-  console.log(checkbox);
+  // console.log(event);
+  // console.log(todoText);
+  // console.log(checkbox);
 
 }
-
-
 
 toDoForm.addEventListener("submit" , handleToDoSubmit);
 

@@ -45,7 +45,7 @@ img {
 }
 
 #login-form {
-  top: 5%;
+  top: 3.5%;
   left: 90%;
 }
 
@@ -101,8 +101,8 @@ img {
 }
 
 #greeting{
-  top: 2.5%;
-  left: 91%;
+  top: 0.5%;
+  left: 92%;
 
   font-family: "Dongle", sans-serif;
   font-weight: 700;
@@ -237,4 +237,30 @@ img {
   font-style: normal;
   font-size: 45px;
   
+}
+
+#webPage {
+ top: 4%;
+ display: flex;
+}
+
+#webPage a{
+  border : 2px solid white;
+  border-radius: 13%;
+  /* background-color: white; */
+  padding: 4px 4px;
+  margin: 0px 12px;
+}
+
+#webPage i{
+  margin-top: 3px;
+
+  width: 35px;
+  height: 35px;
+  font-size: 30px;
+
+  color: white;
+
+  text-shadow: none;
+  text-align: center;
 }
