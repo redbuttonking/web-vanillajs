@@ -1,4 +1,6 @@
-# 2024-03-14 노마드 코더 바닐라 JS Chrome 앱 만들기
+# 2024-03-14 노마드 코더 바닐라 JS Chrome 앱 만들기   
+
+### [link](https://redbuttonking.github.io/web-vanillajs/)
 
 ## day 1 - 24.03.14 
 
@@ -250,5 +252,3 @@ updateTodoState(event);
 
 <웹페이지로 가는 아이콘 생성>
 > 네이버, 유튜브, 구글 세 가지의 아이콘을 만들어서 상단쪽에 배치함
-<브런치 테스트>
->todo.js 106line
