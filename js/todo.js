@@ -27,16 +27,22 @@ function paintToDo(newTodo){
   const button = document.createElement("i");
   
   checkbox.type="checkbox";
-  checkbox.checked = newTodo.isChecked;
+  checkbox.checked = newTodo.ischecked;
 
   li.id=newTodo.id;
   span.innerText = newTodo.text;
+  if(checkbox.checked){
+    span.classList.toggle("midline");
+  }
   
+
   button.classList.add("fa-solid","fa-trash-can");
+
 
   button.addEventListener("click",deleteToDo);
   button.addEventListener("click",checkTodo);
   checkbox.addEventListener("change",updateTodoState);
+  // checkbox.addEventListener("change",);
 
   li.appendChild(checkbox);
   li.appendChild(span);
@@ -83,27 +89,40 @@ function checkTodo(){
 }
 
 function updateTodoState(event){
-  var checkbox = event.target;
-  var todoText = checkbox.nextSibling;
+  let checkbox = event.target;
+  let todoText = checkbox.nextSibling;
+  let li = event.target.parentElement.id;
   
   if (checkbox.checked) {
-    todoText.style.textDecoration = "line-through";
-    todoText.style.color = "rgba(255, 255, 255,0.7)"
-    todoText.style.textShadow = "none";
-    // localStorage.setItem("isChecked",true);
-
+    // todoText.style.textDecoration = "line-through";
+    // todoText.style.color = "rgba(255, 255, 255,0.7)"
+    // todoText.style.textShadow = "none";
     
+    for(let i = 0 ; i < toDos.length ; i++){
+
+      if(toDos[i].id === Number(li)){
+        toDos[i].ischecked = true;
+        saveToDos();
+      }
+
+    }
+
   } else {
-    todoText.style.textDecoration = "none";
-    todoText.style.color = "aliceblue";
-    todoText.style.textShadow = "var(--text-edge)";
+    // todoText.style.textDecoration = "none";
+    // todoText.style.color = "aliceblue";
+    // todoText.style.textShadow = "var(--text-edge)";
     // localStorage.setItem("isChecked",false);
 
-  }
+    for(let i = 0 ; i < toDos.length ; i++){
 
-  // console.log(event);
-  // console.log(todoText);
-  // console.log(checkbox);
+      if(toDos[i].id === Number(li)){
+        toDos[i].ischecked = false;
+        saveToDos();
+      }
+
+    }
+
+  }
 
 }
 
@@ -113,7 +132,6 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if(savedToDos){
 
-  
   const parsedTodos = JSON.parse(savedToDos);
   toDos = parsedTodos;
   parsedTodos.forEach(paintToDo);
