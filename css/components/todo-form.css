@@ -1,0 +1,28 @@
+
+#todo-form {
+  margin-top: 20px;
+}
+
+#todo-form input{
+  width: 1000px;
+  height: 40px;
+
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  text-shadow: var(--text-edge);
+
+  border: none;
+  border-bottom: 2px solid white ;
+  background-color: transparent;
+
+  outline: none; 
+}
+
+#todo-form input::placeholder{
+  color: white;
+}

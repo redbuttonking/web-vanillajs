@@ -223,8 +223,9 @@ fetch(url)  // 1. url를 요청하고
 
 ## day 11 - 24.04.02 _ To Do List 디자인 하기 _ CSS 5 / 기능 구현(checkbox)
 
-<todolist 취소선 변경>
-> css로 취소선을 적용 시켰는데 js에서 eventlistener로 적용하게끔 바꿈
+> todolist 취소선 변경
+
+css로 취소선을 적용 시켰는데 js에서 eventlistener로 적용하게끔 바꿈
 
 ```
 // todolist의 현재 상태(체크박스)에 따라 css를 변경함
@@ -238,32 +239,67 @@ updateTodoState(event);
 }
 
 ```
-<네이버 , 유튜브 , 구글 링크 생성>   
-> a태그로 생성해 놓음
+> 네이버 , 유튜브 , 구글 링크 생성
 
-~~<체크박스 상태 유지 (로컬스토리지에 저장)>~~ _ 구현중
-> 도대체.... 왜... 안되는것이야... 내가 모르는 것이 있나 왜 상태 업데이트가 안되고 저장도 안되고 불러오는것도 안되냐 이말이야!!!!!!
+a태그로 생성해 놓음
 
-<다음에 해야할 일>   
-1. 체크박스 기능 구현   
-2. ~~웹페이지 링크 디자인 구현~~
+> ~~체크박스 상태 유지 (로컬스토리지에 저장)~~ _ 구현중
+
+도대체.... 왜... 안되는것이야... 내가 모르는 것이 있나 왜 상태 업데이트가 안되고 저장도 안되고 불러오는것도 안되냐 이말이야!!!!!!
+
+> 다음에 해야할 일
+
+1 . 체크박스 기능 구현   
+2 . ~~웹페이지 링크 디자인 구현~~
 
 ## day 12 - 24.04.03 _ To Do List 디자인 하기 _ CSS 6   
 
-<웹페이지로 가는 아이콘 생성>
-> 네이버, 유튜브, 구글 세 가지의 아이콘을 만들어서 상단쪽에 배치함   
+> 웹페이지로 가는 아이콘 생성
 
-<로컬스토리지 ischecked 값 변경 _ 함수 기능 변경>
-> `updateTodoState()`를 ischecked의 값을 변경하는 함수로 바꿈   
+네이버, 유튜브, 구글 세 가지의 아이콘을 만들어서 상단쪽에 배치함   
 
-<다음에 해야할 일>   
-1. 체크박스 디자인 구현 (체크박스 클릭시 삭제선 디자인 적용)   
+> 로컬스토리지 ischecked 값 변경 _ 함수 기능 변경   
+
+`updateTodoState()`를 ischecked의 값을 변경하는 함수로 바꿈   
+
+> 다음에 해야할 일   
+
+1.체크박스 디자인 구현 (체크박스 클릭시 삭제선 디자인 적용)   
 
 ## day 13 - 24.04.04 _ To Do List 디자인 하기 _ CSS 7   
 
-<드.디.어 checkbox 이벤트 완성.>
-> choeckbox가 선택이 되면 `updateTodoState()`가 실행됨   
+> <드.디.어 checkbox 이벤트 완성.>   
+
+choeckbox가 선택이 되면 `updateTodoState()`가 실행됨   
 함수에서는 조건에 맞게 취소선을 나타내고 toDos의 ischecked의 값을 바꾸고   
-다시 로컬 스토리지에 저장(`saveToDos()`)을 한다. 
+다시 로컬 스토리지에 저장( `saveToDos()` )을 한다. 
+
+## day 14 - 24.04.08 _ 프로젝트 마무리 단계
+
+> 날씨 아이콘 생성   
+
+**openweather** 에서 제공하는 icon을 가져와 날씨를 img로 표현함
+
+> css 폴더화   
+
+각 구성들 마다 하나의 css를 만들고 style.css에 import 하여 첨삭하기 쉽게 파일을 나눔
+```
+// style.css
+
+@import "reset.css";
+@import "variables.css";
+
+
+/* components */
+@import "components/login-form.css";
+@import "components/clock.css";
+@import "components/greeting.css";
+@import "components/todo-form.css";
+@import "components/todo-list.css";
+@import "components/bible.css";
+@import "components/weather.css";
+@import "components/info.css";
+@import "components/webpage.css";
+```
 
 ## 프로젝트 기능 설명   

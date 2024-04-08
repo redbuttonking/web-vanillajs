@@ -1,0 +1,33 @@
+
+@keyframes blink {
+
+  0%{
+    color: rgb(176, 231, 253);      
+  }
+  50%{
+    color: rgb(84, 206, 255);    
+  }
+  100%{
+    color: rgb(176, 231, 253);    
+  }
+}
+
+#info {
+  top: 78%;
+  animation: blink 2s infinite;
+
+  font-family: "Dongle", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+}
+
+#plz-addTodo {
+  top: 70%;
+
+  font-family: "Dongle", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 45px;
+  
+}

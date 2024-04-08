@@ -1,0 +1,18 @@
+#clock {
+  top: 40%;
+  left: 47%;
+
+  font-family: "Rubik Scribble", system-ui;
+  font-weight: 900;
+  font-style: normal;
+  text-shadow: -1px -1px 0 black;
+  font-size: 130px;
+
+}
+
+#clock span:last-child{
+  top: 50%;
+  left: 105%;
+  position: absolute;
+  font-size: 45px;
+}

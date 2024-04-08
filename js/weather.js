@@ -1,4 +1,4 @@
-const API_KEY = "4cf72d7f1713f055c9e640ef03d636d9";
+const API_KEY = "a3ccc7ba662fd034220dee01cd6cd538";
 
 function onGeoOk(position){
   const lat = position.coords.latitude;
@@ -7,11 +7,14 @@ function onGeoOk(position){
   fetch(url)
   .then((response) => response.json())
   .then((data) =>{
-    const weather = document.querySelector("#weather-temp");
+    const weatherIcon = document.querySelector("#weatherIcon");
+    const weather = document.querySelector("#weather-main");
     const city = document.querySelector("#city");
+    let dataIcon = data.weather[0].icon;
     city.innerText = data.name;
-    weather.innerText = `${data.weather[0].main} / ${data.main.temp}°`;
-    });
+    weatherIcon.src = `http://openweathermap.org/img/wn/${dataIcon}.png`;
+    weather.innerText = `${data.weather[0].main} / ${data.main.temp} °`;
+  });
 
 }
 
