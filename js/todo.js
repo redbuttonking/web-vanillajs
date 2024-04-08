@@ -112,7 +112,6 @@ function updateTodoState(event){
     todoText.style.textDecoration = "none";
     todoText.style.color = "aliceblue";
     todoText.style.textShadow = "var(--text-edge)";
-    localStorage.setItem("isChecked",false);
 
     for(let i = 0 ; i < toDos.length ; i++){
 
@@ -137,6 +136,5 @@ if(savedToDos){
   toDos = parsedTodos;
   parsedTodos.forEach(paintToDo);
   checkTodo();
-  
-  console.log(toDos);
+
 }
