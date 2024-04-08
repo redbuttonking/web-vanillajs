@@ -259,4 +259,11 @@ updateTodoState(event);
 <다음에 해야할 일>   
 1. 체크박스 디자인 구현 (체크박스 클릭시 삭제선 디자인 적용)   
 
-## 프로젝트 기능 추가 설명 
+## day 13 - 24.04.04 _ To Do List 디자인 하기 _ CSS 7   
+
+<드.디.어 checkbox 이벤트 완성.>
+> choeckbox가 선택이 되면 `updateTodoState()`가 실행됨   
+함수에서는 조건에 맞게 취소선을 나타내고 toDos의 ischecked의 값을 바꾸고   
+다시 로컬 스토리지에 저장(`saveToDos()`)을 한다. 
+
+## 프로젝트 기능 설명   

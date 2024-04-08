@@ -42,7 +42,6 @@ function paintToDo(newTodo){
   button.addEventListener("click",deleteToDo);
   button.addEventListener("click",checkTodo);
   checkbox.addEventListener("change",updateTodoState);
-  // checkbox.addEventListener("change",);
 
   li.appendChild(checkbox);
   li.appendChild(span);
@@ -94,9 +93,10 @@ function updateTodoState(event){
   let li = event.target.parentElement.id;
   
   if (checkbox.checked) {
-    // todoText.style.textDecoration = "line-through";
-    // todoText.style.color = "rgba(255, 255, 255,0.7)"
-    // todoText.style.textShadow = "none";
+
+    todoText.style.textDecoration = "line-through";
+    todoText.style.color = "rgba(255, 255, 255,0.7)"
+    todoText.style.textShadow = "none";
     
     for(let i = 0 ; i < toDos.length ; i++){
 
@@ -108,10 +108,11 @@ function updateTodoState(event){
     }
 
   } else {
-    // todoText.style.textDecoration = "none";
-    // todoText.style.color = "aliceblue";
-    // todoText.style.textShadow = "var(--text-edge)";
-    // localStorage.setItem("isChecked",false);
+
+    todoText.style.textDecoration = "none";
+    todoText.style.color = "aliceblue";
+    todoText.style.textShadow = "var(--text-edge)";
+    localStorage.setItem("isChecked",false);
 
     for(let i = 0 ; i < toDos.length ; i++){
 

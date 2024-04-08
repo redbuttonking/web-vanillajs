@@ -180,12 +180,6 @@ img {
 
 }
 
-/* #todo-list li input[type="checkbox"]:checked + span{
-  text-decoration: line-through; 
-  color: rgba(255, 255, 255,0.7);
-  text-shadow: none;
-} */
-
 #todo-list li span{
   margin-top: 5px;
   padding-right: 10px;
