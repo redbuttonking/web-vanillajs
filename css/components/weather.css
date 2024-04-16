@@ -3,13 +3,13 @@
   display: flex;
   flex-direction: column;
   align-items: first baseline;
-  top: 8.5%;
-  left: 6%;
+  top: 11%;
+  left: 7.5%;
 
   font-family: "Dongle", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 28px;
+  font-size: 40px;
 
 }
 
