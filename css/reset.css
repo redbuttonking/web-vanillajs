@@ -1,7 +1,7 @@
 #login-form, #clock, #greeting,
 #todo-form, #todo-list, #bible,
 #weather, #info, #plz-addTodo, 
-#webPage, #bg-opacity {
+#webPage {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);    
