@@ -2,7 +2,7 @@
 
 ### 🔭Preview
 
-<img src="img/ToDoList-img.jpg" width="500">
+<img src="img/ToDoList-img.jpg" width="800">
 
 ### 👉 [link](https://redbuttonking.github.io/web-vanillajs/)
 # 1. 프로젝트 기능 설명   
