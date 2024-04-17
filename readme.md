@@ -1,8 +1,11 @@
 # 노마드 코더 바닐라 JS Chrome
 
-### 👉 [link](https://redbuttonking.github.io/web-vanillajs/)
+### 🔭Preview
 
-# 프로젝트 기능 설명   
+<img src="img/ToDoList-img.jpg" width="500">
+
+### 👉 [link](https://redbuttonking.github.io/web-vanillajs/)
+# 1. 프로젝트 기능 설명   
 
  ### 1. todo.js
 
@@ -89,7 +92,7 @@
 
 [👆맨위로👆](#노마드-코더-바닐라-js-chrome)
 
-# 프로젝트 기록
+# 2. 프로젝트 기록
 
 <details> 
 
@@ -117,7 +120,7 @@ toggle을 사용하여 html태그를 숨기거나 나타나게 하는것을 배�
 > 파일들을 세분화 해서 관리하기 위해 js 폴더와 css 폴더를 각각 만들었음  
  
 > 브라우저가 사용자의 입력 정보를 기억하는(저장) **LocalStorage**를 배움  
-```
+```js
 // 저장할 키값과 값을 저장함
 localStorage.setItem("key" , "value");
 
@@ -145,7 +148,8 @@ ex) `const USERNAME_KEY = "username"; `
 
 
 - js 에서 제공하는 **date** 객체를 사용해서 년,월,일,시간(시/분/초)을 알 수 있다.  
-  ```
+  
+  ```js
   // date라는 이름의 Date 객체 생성
   const date = new Date();
 
@@ -167,7 +171,7 @@ string이 가져야 할 길이가 n 인데 그렇지 않다면 앞쪽에 "x"를 
 
 > js에 있는 Math모듈에서 여러가지 함수를 배움
 
-```
+```js
 // 랜덤으로 0~1사이 수를 제공함
 Math.random();
 
@@ -187,7 +191,7 @@ bibleVerse[Math.floor(Math.random()*bibleVerse.length)];
 
 > js에서 HTML(img태그)를 생성하고 값(src)를 넣어주는 방법을 배움   
 
-```
+```js
 // bgImge에 img태그를 생성
 const bgImge = document.createElement("img");
 
@@ -233,7 +237,7 @@ localStorage에 입력된 값(ToDo)를 array로 저장하게함.
 
 > 애로우 함수를 배움.(간략하게 함수 선언)   
 
-```
+```js
 // ex)
 parsedTodos.array.forEach((item) => console.log("ㅎㅇㅎㅇ",item));
 ```
@@ -258,7 +262,7 @@ array의 요소를 가지고 그만큼 ()안에 함수를 실행하고 그때마
 > `filter()`
 
 promise함수 이기 때문에 당장 일어나지 않고 시간이 걸린뒤에 일어남 그래서 Then과 함께 사용함
-```
+```js
 fetch(url)  // 1. url를 요청하고
   .then((response) => response.json())   // 2. response(응답)받고
   .then((data) =>{   // 3. 데이터를 얻는다 (HTML에 넣는것 까지)
@@ -351,7 +355,7 @@ todolist가 없거나 첫 이름 입력하기 전에 "Please add something to do
 
 css로 취소선을 적용 시켰는데 js에서 eventlistener로 적용하게끔 바꿈
 
-```
+```js
 // todolist의 현재 상태(체크박스)에 따라 css를 변경함
 updateTodoState(event);
 
@@ -413,7 +417,7 @@ choeckbox가 선택이 되면 `updateTodoState()`가 실행됨
 > css 폴더화   
 
 각 구성들 마다 하나의 css를 만들고 style.css에 import 하여 첨삭하기 쉽게 파일을 나눔
-```
+```css
 // style.css
 
 @import "reset.css";
@@ -436,3 +440,23 @@ choeckbox가 선택이 되면 `updateTodoState()`가 실행됨
 
 </details>
 
+<p></p>
+
+# 3. 프로젝트를 마치며...
+
+<details>
+
+<summary> 느낀점 </summary>
+
+---
+
+바닐라 JS를 배우고 프로젝트를 하면서 학교에서 배운 것과는 많이 달랐다는 걸 느꼈다. 학교에서는 완전히 기초(변수 선언, 함수 사용 방법 등...)를 배웠었다. 이번 강의를 통해서 HTML과 JS가 어떻게 상호작용을 하는지, 사용자의 행동들을 감지하여 여러 이벤트를 발생시키고 로컬에 데이터를 저장하는 방법 등을 배웠다. 이에 따라 JS에 한 걸음 더 다가간 것 같아 매우 보람찬 시간이었다.   
+
+이전에 카카오톡 클론 코딩을 하면서 CSS와 HTML을 잘 다져 놓아서 그런지 디자인하는 것에는 무리가 없었고 한 번 더 복습하는 계기가 되어서 좋았다.
+
+개인적으로 강의에는 없었지만 넣고 싶은 기능과 스타일들을 구현했다. (체크박스 스타일/기능, 안내 문구, 애니메이션, 다른 웹사이트 진입)   
+구현하는 데에 내가 생각한 대로 뚝딱 구현되지는 않아서 쉽지는 않았다. 특히 체크박스 기능 구현이 어려웠었는데 포기 할까도 생각 했지만 완성하고 싶은 욕심이 자꾸 생겨서 다시 앉아서 생각해 보고 구글링과 친구들의 조언을 통해 구현했다. 완성된 프로젝트를 바라볼 때는 성취감은 이루 말할 수 없을 만큼 뿌듯했고 나 스스로 대견해했다.
+
+나 스스로 생각해 보고 새로운 것을 만들고 배운 것을 토대로 적용하는데 가장 의미가 있었다. 앞으로도 배움에 있어서 깊게 고민하고 적용하며 응용하는 마인드로 나아가야겠다.
+
+</details>
