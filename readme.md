@@ -436,7 +436,7 @@ choeckbox가 선택이 되면 `updateTodoState()`가 실행됨
 @import "components/webpage.css";
 ```
 
-[👆기록 처음으로👆](#프로젝트-기록)
+[👆기록 처음으로👆](#2-프로젝트-기록)
 
 </details>
 
